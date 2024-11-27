@@ -22,7 +22,7 @@ ipsaya=$(wget -qO- ipinfo.io/ip)
 # data Telegram
 TIMES="10"
 CHATID="6686272246"
-KEY="8189306677:AAG3_IH_f_esqgelOYufy8gsFw8cxzq99DI
+KEY="8189306677:AAG3_IH_f_esqgelOYufy8gsFw8cxzq99DI"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 
 # //
@@ -44,6 +44,7 @@ touch /var/log/xray/access.log
 touch /var/log/xray/error.log
 
 clear
+REPO_BANNER="https://raw.githubusercontent.com/wuzzstore/myscript/main/"
 REPO_MENU="https://raw.githubusercontent.com/wuzzstore/myscript/main/"
 function pasang_domain() {
 clear
@@ -695,7 +696,7 @@ fi
 clear
 echo "Banner /etc/banner.txt" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/banner.txt"@g' /etc/default/dropbear
-wget -O /etc/banner.txt "${REPO}banner/issue.net"
+wget -O /etc/banner.txt "${REPO_BANNER}banner/issue.net"
 print_success "Fail2ban"
 }
 function ins_epro(){
